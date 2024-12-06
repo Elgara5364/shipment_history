@@ -2,6 +2,7 @@ import { connectDB } from "@/app/database";
 import { History } from "@/app/models/history";
 import { NextResponse } from "next/server";
 
+// get data from tracking number in params
 export async function GET(req, { params }) {
   try {
     await connectDB();
@@ -12,6 +13,8 @@ export async function GET(req, { params }) {
     return NextResponse.json({ error: error.message });
   }
 }
+
+//update history
 export async function POST(req, { params }) {
   try {
     await connectDB();

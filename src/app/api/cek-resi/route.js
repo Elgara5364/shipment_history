@@ -7,7 +7,7 @@ export async function GET(req) {
     await connectDB();
 
     const searchParams = req.nextUrl.searchParams;
-    const searchQuery = searchParams.get("tracking_number") || "";
+    const searchQuery = searchParams.get("tracking_number") || ""; //get data from query
     // console.log(searchQuery);
 
     // const { name } = await params;
@@ -18,6 +18,7 @@ export async function GET(req) {
   }
 }
 
+//Create new Data
 export async function POST(req) {
   try {
     await connectDB();

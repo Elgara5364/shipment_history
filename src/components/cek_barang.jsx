@@ -1,6 +1,6 @@
 const CekBarang = ({ data }) => {
-  if (data) {
-    console.log(data[0].history);
+  console.log(data);
+  if (data && JSON.stringify(data) != "[]") {
     return (
       <section>
         <p>{data[0].item_name}</p>
